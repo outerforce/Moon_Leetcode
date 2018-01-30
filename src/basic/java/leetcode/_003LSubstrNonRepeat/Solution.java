@@ -52,22 +52,3 @@ public class Solution {
 
     }
 }
-
-/*
-
-    int len, a = 0;
-    int x = 0 , y = x + 1;
-    char [] arr = s.toCharArray();
-    int length = arr.length;
-        if( arr[x] == arr[y]){
-                x++;
-
-                } else {
-                while (arr[x] != arr[y] && y < length -1 && arr[y] != arr[y-1]) {
-        y++;
-        a++;
-        }
-        len = a+1;
-        }
-        len = (len> y-x)? len: y-x;
-        return len;*/
