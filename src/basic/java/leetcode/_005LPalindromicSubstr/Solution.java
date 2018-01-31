@@ -44,23 +44,14 @@ public class Solution {
     // i + 1 < j  dp[i][j] = dp[i + 1][j - 1] && s[i] == s[j] ?
 
 
-
-
     public String LongestPalindrome2(String s){
         int len = s.length();
         if(len <= 1) return s;
         int start = 0, end = 0;
         char[] chars = s.toCharArray();
         boolean[][] dp = new boolean[len][len];
-        for(int i =0; i<len;i++){
-            dp[i][i] = true;
-            for(int j = 0; j < i; j++){
-                if(j + 1 == i){
-                    dp[j][i] = (chars[j] == chars[i]);
-                }
-            }
-
-        }
+       s = "";
+       return s;
 
     }
 
