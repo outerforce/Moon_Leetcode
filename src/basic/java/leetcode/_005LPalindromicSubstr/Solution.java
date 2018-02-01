@@ -44,7 +44,7 @@ public class Solution {
     // i + 1 < j  dp[i][j] = dp[i + 1][j - 1] && s[i] == s[j] ?
 
 
-    public String LongestPalindrome2(String s){
+    public String LongestPalindrome1(String s){
         int len = s.length();
         if(len <= 1) return s;
         int start = 0, end = 0;
@@ -55,6 +55,7 @@ public class Solution {
 
     }
 
+    // Manacher's algorithm time: n
     public static void main(String[] args) {
         Solution s = new Solution();
         String input = "babad";
@@ -63,3 +64,4 @@ public class Solution {
         System.out.println(res);
     }
 }
+
