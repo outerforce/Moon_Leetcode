@@ -50,8 +50,22 @@ public class Solution {
         int start = 0, end = 0;
         char[] chars = s.toCharArray();
         boolean[][] dp = new boolean[len][len];
-       s = "";
-       return s;
+        for(int i= 0; i < len; i++){
+            dp[i][i] = true;
+            for(int j =0; j < i; j++){
+                if(j + 1 == i){
+                    dp[j][i] = (chars[j] == chars[i]);
+                }else {
+                    dp[j][i] = dp[j+1][i-1] && chars[j] == chars[i];
+                }
+                if( dp[j][i] && i -j > end - start){
+                    start = j;
+                    end = i;
+                }
+
+            }
+        }
+       return s.substring(start, end + 1);
 
     }
 
@@ -60,8 +74,10 @@ public class Solution {
         Solution s = new Solution();
         String input = "babad";
         String input1 = "cbbd";
-        String res = s.LongestPalindrome(input1);
+        String res = s.LongestPalindrome(input);
+        String res1 = s.LongestPalindrome1(input);
         System.out.println(res);
+        System.out.println(res1);
     }
 }
 

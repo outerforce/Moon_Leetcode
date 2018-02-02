@@ -14,14 +14,30 @@ package basic.java.leetcode._008StringToInteger;
  */
 public class Solution {
     public int myAtoi(String str){
-        int length = str.length();
+        int len= str.length();
         int i = 0, ans = 0, sign = 1;
-        while(i< length && str.charAt(i) == ' ') i++;
-        if( i < length )
+        char[] chars = str.toCharArray();
 
+        while(i< len && chars[i] == ' ') i++;
+        if( i < len && chars[i] == '-' || chars[i] == '+' ){
+            sign = chars[i++] == '+' ? 1:-1;
+        }
+        for(;i<len;i++){
+            int tmp = chars[i] -'0';
+            if(tmp < 0 || tmp > 9)
+                break;
+            if(ans > Integer.MAX_VALUE /10 || ans == Integer.MAX_VALUE / 10 && Integer.MAX_VALUE % 10 < tmp){
+                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            } else{
+                ans = ans * 10 + tmp;
+            }
+        }
+        return sign * ans;
     }
 
     public static void main(String[] params){
-
+            Solution s = new Solution();
+            int res = s.myAtoi("    -41255    ");
+            System.out.println(res);
     }
 }
