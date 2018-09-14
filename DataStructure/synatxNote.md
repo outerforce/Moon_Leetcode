@@ -100,3 +100,18 @@ how to manage complexity
 ######Comparable and Comparator
 ability to make callback()
 explicit function passing in other language
+
+
+#### Checked and Unchecked
+java consider IO exception as checked, runtime exception or Error as unchecked
+
+all checked exception myst be caught or specified
+
+#### Access control
+protected: package included, not the world
+private: only in current class
+default: default package 
+
+#### Object method
++ == same object(reference address)
++ .equals() same content
