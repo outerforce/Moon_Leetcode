@@ -59,6 +59,15 @@ iterative deepening running times:
 
 
 #### Graph representation
+E is the total number of edges of entire graph;
+V is the total number of vertices
 + adjacency matrix &theta;(V<sup>2</sup>)
 + edge sets
-+ adjacency lists(most popular) &theta;(V) to &theta;(V<sup>2</sup>)
++ adjacency lists(most popular) runtime to print graph:  &theta;(V+E) <br/>
+  since E can be &theta;(sqrt(V)) when graph is sparse <br/>
+  E can be &theta;(V<sup>2</sup>) when graph is dense <br/>
+  &theta;(V) < runtime < &theta;(V<sup>2</sup>)
+
+#### Graph traversal
++ Depth first traversal
+
