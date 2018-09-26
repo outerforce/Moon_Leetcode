@@ -61,8 +61,8 @@ Tests covers many units at once
 
 
 #### overriding and overloading
-+ overriding: method with same signature with super class (inheritance)
-+ overloading: method with same name but different signatures
++ overriding: method with same signature with super class (inheritance) running time
++ overloading: method with same name but different signatures (compile time}
 --------------------------------------------------
 Pros:
 - add Override tag can prevent typos

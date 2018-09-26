@@ -33,9 +33,8 @@ import java.util.List;
 
 public class Solution {
     public List<List<Integer>> sublist(int[] nums){
-        int len = nums.length;
         List<List<Integer>> result = new ArrayList<>();
-        result.add(new ArrayList<Integer>());
+        result.add(new ArrayList<>());
         for(int num:nums){
            int size = result.size();
            for(int i = 0; i < size; i++){
@@ -47,6 +46,11 @@ public class Solution {
         return result;
     }
 
+//    //recursive
+//    public ArrayList<ArrayList<Integer>> subset(int[] nums){
+//        List<List<Integer>> result = new ArrayList<>();
+//        result.add(new ArrayList<>());
+//    }
     public static void main(String[]args){
         Solution s=new Solution();
         int [] nums = {4,5,8};

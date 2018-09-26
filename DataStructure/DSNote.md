@@ -69,5 +69,7 @@ V is the total number of vertices
   &theta;(V) < runtime < &theta;(V<sup>2</sup>)
 
 #### Graph traversal
-+ Depth first traversal
++ topological order: reverse of the DFS post order, traverse from every vertex with indegree = 0
++ Depth first Paths: run in O(V+E)
++ topological sort:
 

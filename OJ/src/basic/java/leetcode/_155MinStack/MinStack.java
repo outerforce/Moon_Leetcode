@@ -27,34 +27,34 @@ package basic.java.leetcode._155MinStack;
 
 
 
-class MinStack {
-
-    /** initialize your data structure here. */
-    public MinStack() {
-
-    }
-
-    public void push(int x) {
-
-    }
-
-    public void pop() {
-
-    }
-
-    public int top() {
-
-    }
-
-    public int getMin() {
-
-    }
-
-    public static void main(String[]args){
-        MinStack s=new MinStack();
-
-    }
-}
+//class MinStack {
+//
+//    /** initialize your data structure here. */
+//    public MinStack() {
+//
+//    }
+//
+//    public void push(int x) {
+//
+//    }
+//
+//    public void pop() {
+//
+//    }
+//
+//    public int top() {
+//
+//    }
+//
+//    public int getMin() {
+//
+//    }
+//
+//    public static void main(String[]args){
+//        MinStack s=new MinStack();
+//
+//    }
+//}
 
 /**
  * Your MinStack object will be instantiated and called as such:
