@@ -19,17 +19,18 @@ package basic.java.leetcode._028strStr;
 // complexity: O(m+n)
 public class strStr {
     public static int strStr(String haystack, String needle) {
-        if (haystack == " " || needle == " ") {
-            return 0;
-        }
+        int s_len = haystack.length();
+        int n_len = needle.length();
+        if(n_len == 0) return 0;
+        if(s_len < n_len) return -1;
         int i, j;
-        for (i = 0; i < haystack.length() - needle.length(); i++) {
-            for(j = 0; j < needle.length(); j++) {
-                if (haystack.charAt(i+j) != needle.charAt(j)) {
+        for (i = 0; i < s_len - n_len + 1; i++) {
+            for(j = 0; j < n_len; j++) {
+                if (haystack.charAt(i + j) != needle.charAt(j)) {
                     break;
                 }
             }//for j
-            if (j == needle.length()) {
+            if (j == n_len) {
                 return i;
             }
         }
@@ -39,6 +40,7 @@ public class strStr {
     public static void main(String[] args) {
         System.out.println(strStr("hello", "ll"));
         System.out.println(strStr("aaaaa", "baa"));
+        System.out.println(strStr("a", ""));
     }
 
 }

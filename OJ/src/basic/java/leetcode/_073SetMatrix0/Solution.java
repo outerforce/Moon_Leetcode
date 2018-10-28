@@ -14,6 +14,7 @@ import java.util.Arrays;
 
 public class Solution {
     public void setMatrixZeroes(int[][] matrix) {
+        if ((matrix == null || matrix.length == 0)) return;
         int m = matrix.length, n = matrix[0].length;
         boolean rflag = false, cflag = false;
         for (int i = 0; i < m; i++) {

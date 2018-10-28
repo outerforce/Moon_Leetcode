@@ -45,6 +45,12 @@ class Solution {
         return null;
     }
 
+    /**
+     * store: (7,0),(2,1),(-2,2),(-6,3)
+     * [2,7,11,15]
+     * @param args
+     */
+
     public static void main(String[] args) {
         int[] arr = {7, 3, 6, 3, 11, 15};
         int target = 6;

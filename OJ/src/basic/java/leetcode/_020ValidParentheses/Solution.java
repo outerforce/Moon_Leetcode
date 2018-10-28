@@ -39,6 +39,7 @@ public class Solution {
     }
 
     public boolean isValidParentheses1(String s) {
+        if(s.length() == 0) return true;
         char[] stack = new char[s.length() + 1];
         int top = 1;
         for (char c : s.toCharArray()) {

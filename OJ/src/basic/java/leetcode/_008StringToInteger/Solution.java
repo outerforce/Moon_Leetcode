@@ -19,14 +19,16 @@ public class Solution {
         char[] chars = str.toCharArray();
 
         while (i < len && chars[i] == ' ') i++;
+        if (i == str.length()) {return 0;}
         if (i < len && chars[i] == '-' || chars[i] == '+') {
             sign = chars[i++] == '+' ? 1 : -1;
         }
         for (; i < len; i++) {
             int tmp = chars[i] - '0';
+            //System.out.println(tmp);
             if (tmp < 0 || tmp > 9)
                 break;
-            if (ans > Integer.MAX_VALUE / 10 || ans == Integer.MAX_VALUE / 10 && Integer.MAX_VALUE % 10 < tmp) {
+            if ((Integer.MAX_VALUE - tmp)/10 < ans) {
                 return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             } else {
                 ans = ans * 10 + tmp;
@@ -34,10 +36,36 @@ public class Solution {
         }
         return sign * ans;
     }
+        public int myAtoi1(String str) {
+            char [] chars = str.toCharArray();
+            int len = chars.length;
+            if(len == 0){return 0;}
+            int sign = 1, res = 0;
+            int i = 0;
+            while(i < len && chars[i] == ' '){ i++;}
+            if (i == str.length()) {return 0;}
+            if(i < len && chars[i] == '+' || chars[i] == '-'){
+                sign = chars[i++] == '+' ? 1 : -1;
+            }
+            for(; i < len; i++){
+                int tmp = chars[i] - '0';
+                if(tmp < 0 || tmp > 9){
+                    break;
+                }
+                if(res > Integer.MAX_VALUE / 10 || res == Integer.MAX_VALUE / 10 && Integer.MAX_VALUE % 10 < tmp){
+                    return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+                }else{
+                    res = res * 10 + tmp;
+                }
+            }
+            return res * sign;
+        }
+
 
     public static void main(String[] params) {
         Solution s = new Solution();
         int res = s.myAtoi("    -41255    ");
+        int res1 = s.myAtoi(" ");
         System.out.println(res);
     }
 }

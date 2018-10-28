@@ -15,20 +15,23 @@ import basic.java.structure.ListNode;
  */
 public class Solution {
     public ListNode mergeTwoList(ListNode l1, ListNode l2) {
-        ListNode head = new ListNode(0);
-        ListNode temp = head;
-        while (l1 != null && l2 != null) {
-            if (l1.val < l2.val) {
-                temp.next = l1;
+        ListNode result = new ListNode(0);
+        ListNode cur = result;
+        while(l1 != null && l2 != null){
+            if(l1.val < l2.val){
+                cur.next = l1;
                 l1 = l1.next;
-            } else {
-                temp.next = l2;
+            }else{
+                cur.next = l2;
                 l2 = l2.next;
             }
-            temp = temp.next;
+            cur = cur.next;
         }
-        temp.next = l1 != null ? l1 : l2;
-        return head.next;
+        if (l1 == null || l2 == null) {
+            cur.next = l1 != null ? l1 : l2;
+        }
+        result = result.next;
+        return result;
     }
 
     public static void main(String[] args) {
