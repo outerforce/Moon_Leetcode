@@ -1,2 +1,9 @@
 .idea
-out
+*classes
+target/
+build/
+out/
+.classpath
+/.metadata
+.project
+.settings
