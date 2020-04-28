@@ -5,7 +5,6 @@ package basic.java.leetcode._023MergeKSortedLists;
  */
 
 import basic.java.structure.ListNode;
-import sun.rmi.log.LogInputStream;
 
 /***
  * Merge k Sorted Lists
